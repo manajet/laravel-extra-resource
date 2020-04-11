@@ -1,0 +1,28 @@
+{
+    "name": "manajet/extra-resource",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dimitri Bocquet",
+            "email": "contact@dimitribocquet.com",
+            "homepage": "https://dimitribocquet.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Manajet\\ExtraResource\\Providers\\LaravelServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Manajet\\ExtraResource\\": "src/"
+        }
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
