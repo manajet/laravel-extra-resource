@@ -2,6 +2,8 @@
 
 namespace Manajet\ExtraResource\Concerns;
 
+use Illuminate\Support\Arr;
+
 trait ExtraParameters {
     /**
      * The extra data that can be used to construct the resource array.
@@ -22,5 +24,15 @@ trait ExtraParameters {
         $this->extra = $data;
 
         return $this;
+    }
+
+    public function hasExtra($path)
+    {
+        return Arr::has($this->extra, $path);
+    }
+
+    public function getExtra($path, $default = null)
+    {
+        return Arr::get($this->extra, $path, $default);
     }
 }
