@@ -44,12 +44,30 @@ return (new UserResource($user))->using(['foo' => 'bar']);
 And in your Resource class:
 
 ```php
-return [
-    'id' => $this->id,
-    'name' => $this->name,
-    'email' => $this->email,
-    'foo' => $this->extra['foo'],
-]
+<?php
+
+namespace App\Http\Resources;
+
+use Manajet\ExtraResource\ExtraJsonResource;
+
+class UserResource extends ExtraJsonResource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function toArray($request)
+    {
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'email' => $this->email,
+            'foo' => $this->extra['foo'],
+        ];
+    }
+}
 ```
 
 Collection:
