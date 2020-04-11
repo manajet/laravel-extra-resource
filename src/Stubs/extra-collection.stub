@@ -2,9 +2,9 @@
 
 namespace DummyNamespace;
 
-use Manajet\ExtraResource\ExtraJsonResource;
+use Manajet\ExtraResource\ExtraResourceCollection;
 
-class DummyClass extends ExtraJsonResource
+class DummyClass extends ExtraResourceCollection
 {
     /**
      * Transform the resource collection into an array.
