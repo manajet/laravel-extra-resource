@@ -31,7 +31,7 @@ trait ExtraParameters {
         return Arr::has($this->extra, $path);
     }
 
-    public function getExtra($path, $default = null)
+    public function getExtra($path = null, $default = null)
     {
         return Arr::get($this->extra, $path, $default);
     }

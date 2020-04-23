@@ -1,5 +1,12 @@
 {
     "name": "manajet/laravel-extra-resource",
+    "description": "This packages allows you to add extra parameters to your Eloquent API resources and collections.",
+    "keywords": [
+        "laravel",
+        "extra",
+        "resource",
+        "manajet"
+    ],
     "license": "MIT",
     "authors": [
         {
