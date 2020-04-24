@@ -19,7 +19,7 @@ trait ExtraParameters {
      * @param array $data
      * @return $this
      */
-    public function using(array $data)
+    public function using($data = [])
     {
         $this->extra = $data;
 
