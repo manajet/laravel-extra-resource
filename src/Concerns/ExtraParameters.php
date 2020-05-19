@@ -35,4 +35,18 @@ trait ExtraParameters {
     {
         return Arr::get($this->extra, $path, $default);
     }
+
+    public function usingWhen($condition, $data)
+    {
+        if($condition) {
+            $this->using($data);
+        }
+    }
+
+    public function usingWhenHasValue($data)
+    {
+        if($data) {
+            $this->using($data);
+        }
+    }
 }
